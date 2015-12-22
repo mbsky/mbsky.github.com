@@ -1,19 +1,21 @@
 <script>
         try
             {
-                if(self.location == "http://m.xinruinong.com/")
+                var url =  window.location;
+                if(url == "http://m.xinruinong.com/")
                 {
-                    top.location.href = "http://xinruinong.com";
+                    window.location = "http://xinruinong.com";
                 }
-                else if(self.location == "http://xinruinong.com")
+                else if(url == "http://xinruinong.com")
                 {
-                    top.location.href = "http://xinruinong.com";
+                    window.location = "http://xinruinong.com";
                 }
-                else if(self.location == "http://xinruinong.com")
+                else if(url == "http://xinruinong.com")
                 {
-                    top.location.href = "http://xinruinong.com";
+                    window.location = "http://xinruinong.com";
                 }
                 else {document.write ("错误的访问地址")}
+                alert(url)
             }
         catch(e){ alert(e) }
 </script>
