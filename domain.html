@@ -1,6 +1,7 @@
 <script>
         try
             {
+                var ref = document.referer
                 var url =  window.location;
                 if(url == "http://m.xinruinong.com/")
                 {
@@ -16,6 +17,7 @@
                 }
                 //else {document.write ("错误的访问地址")}
                 alert(url)
+                alert(ref)
             }
         catch(e){ alert(e) }
 </script>
