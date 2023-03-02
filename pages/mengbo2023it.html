@@ -1,1 +1,275 @@
-it
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>resume-generator</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./assets/normalize.css">
+		<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+		<style type="text/css">
+.techs-container{margin:10px 0}
+.tech{display:inline-block;min-width:20px;height:20px;line-height:18px;padding:0 7px;border:1px solid #495057;border-radius:10px;margin-right:10px;font-size:12px;color:#495057;background-color:transparent}
+section.info{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+section.info .info-item:not(:last-child){margin-bottom:10px}
+section.info .name{font-size:1.8em;color:#212529}
+section.info .status{height:20px;line-height:14px;padding:3px 5px;border-radius:10px;font-size:12px;color:#fff;background:#212529}
+section.info .sub-text{font-size:14px}
+section.info .location,section.info .sub-item:not(:last-child){margin-right:16px}
+section.info .fas{margin-right:5px}
+section.info .fas,section.info .phone,section.info .email,section.info .print{display:inline-block;vertical-align:middle}
+section.info .languages .language{font-family:OpenSans Light;display:inline-block;min-width:20px;height:20px;line-height:20px;padding:0 7px;border-radius:10px;margin:0 5px;font-size:12px;color:#fff;background:#212529}
+.section-item{margin:24px 0}
+section.experiences .section-header{display:flex;align-items:center;margin:15px 0}
+section.experiences .section-title{font-size:24px;margin-right:20px}
+section.experiences .section-headerline{flex:1;height:1px;background-color:#dee2e6}
+section.experiences .section-content .section-subitem-header{display:flex;align-items:center}
+section.experiences .section-content .section-subitem-header .company-name{flex:1;font-size:1.2em;font-weight:500;line-height:2em;color:#212529}
+section.experiences .section-content .sub-text{font-family:OpenSans,-apple-system,BlinkMacSystemFont,PingFang SC,Helvetica Neue,sans-serif;font-size:1em;color:#adb5bd}
+section.experiences .section-content .project-section{margin:20px 0}
+section.experiences .section-content .project-section .project-name{font-size:1em;color:#495057}
+section.experiences .section-content .project-section .project-detail{margin:10px 0 0 18px;font-size:14px;color:#868e96}
+section.experiences .section-content .project-section .project-detail .detail{line-height:2em}
+section.personal-projects .section-header{display:flex;align-items:center;margin:15px 0}
+section.personal-projects .section-title{font-size:24px;margin-right:20px}
+section.personal-projects .section-headerline{flex:1;height:1px;background-color:#dee2e6}
+section.personal-projects .section-content .project-section{margin:15px 0}
+section.personal-projects .section-content .project-section .project-name{font-size:1em;line-height:1.5em;color:#495057}
+section.personal-projects .section-content .project-section .project-desc{margin:5px 0 10px;line-height:1.5em;font-size:15px;color:#868e96}
+section.personal-projects .section-content .project-section .project-detail{margin:-5px 0 5px 18px;font-size:14px;color:#868e96}
+section.personal-projects .section-content .project-section .project-detail .detail{line-height:2em}
+section.education .section-header{display:flex;align-items:center;margin:15px 0}
+section.education .section-title{font-size:24px;margin-right:20px}
+section.education .section-headerline{flex:1;height:1px;background-color:#dee2e6}
+section.education .section-subitem-header{display:flex;align-items:center}
+section.education .school-name{flex:1;font-weight:500;font-size:1.2em;line-height:2em;color:#212529}
+section.education .range.sub-text{font-size:1em;color:#adb5bd}
+section.education .section-subitem-subheader.sub-text{font-size:1em;color:#adb5bd}
+section.others .section-header{display:flex;align-items:center;margin:15px 0}
+section.others .section-title{font-size:24px;margin-right:20px}
+section.others .section-headerline{flex:1;height:1px;background-color:#dee2e6}
+section.others ul.supplements{margin:10px 0 0 18px;font-size:14px;color:#868e96}
+section.others li.supplement,section.others li.sociallink{line-height:2em}
+section.others li.sociallink .fas,section.others li.sociallink .fab{margin-right:5px}
+section.others .sociallink-text{margin-right:8px}
+*{box-sizing:border-box}
+ul{margin:0;padding:0}
+@font-face{font-family:"PingFang SC";src:url("./assets/PingFang-SC-Regular.ttf")}
+@font-face{font-family:"OpenSans";src:url("./assets/OpenSans-Regular.ttf")}
+@font-face{font-family:"OpenSans Light";src:url("./assets/OpenSans-Light.ttf")}
+html,body{font-family:OpenSans,-apple-system,BlinkMacSystemFont,PingFang SC,Helvetica Neue,"Microsoft YaHei",sans-serif;background:#f7f8f9;-webkit-font-smoothing:antialiased}
+@media print{html,body{background-color:#ffffff}}
+a{color:teal}
+.container{margin:50px auto;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.1);background:#fff}
+@media (min-width:1024px){.container{width:800px;padding:30px 40px}}
+@media (min-width:768px) and (max-width:1024px){.container{width:750px}}
+@media (max-width:320px){.container{margin:0;padding:5px 0;box-shadow:0 0 0}}
+@media print{.container{margin:10px;box-shadow:0 0 0}.container div{break-after:always}}
+::-webkit-scrollbar,:hover::-webkit-scrollbar{background:transparent;width:0}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<section class="info">
+				<div class="info-item name">蒙波</div>
+				<div class="info-item status">目前在职</div>
+				<div class="info-item sub-text">
+					<span class="location">上海</span>
+					<span class="intention">前端 / 后端 / 全栈开发</span>
+				</div>
+				<div class="info-item sub-text">
+					<span class="sub-item">
+						<i class="fas fa-mobile-alt"></i>
+						<span class="phone">13524633090</span>
+					</span>
+					<span class="sub-item">
+						<i class="fas fa-envelope"></i>
+						<span class="email">
+							<span class="email">outdog@foxmail.com</span>
+						</span>
+					</span>
+					<span class="sub-item">
+						<i class="fas fa-print"></i>
+						<a href="./pdf/resume.pdf" target="_blank" rel="noopener noreferrer">打印</a>
+					</span>
+				</div>
+			</section>
+			<section class="section-item others">
+				<div class="section-header">
+					<div class="section-title">自我评价</div>
+					<div class="section-headerline"></div>
+				</div>
+				<div class="section-content">
+					<ul class="supplements">
+						<li class="supplement">这是一段描述这是一段描述这是一段描述这是一段描述</li>
+						<li class="supplement">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+						<li class="supplement">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+						<li class="supplement">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+					</ul>
+				</div>
+			</section>
+			<section class="section-item experiences">
+				<div class="section-header">
+					<div class="section-title">工作经历</div>
+					<div class="section-headerline"></div>
+				</div>
+				<div class="section-content">
+					<div class="section-subitem">
+						<div class="section-subitem-header">
+							<span class="company-name">公司名称</span>
+							<span class="range sub-text">2018-05 ~ 至今</span>
+						</div>
+						<div class="section-subitem-subheader sub-text">后端开发工程师</div>
+						<div class="techs-container">
+							<span class="tech">Java</span>
+							<span class="tech">MySQL</span>
+							<span class="tech">Redis</span>
+							<span class="tech">Spring Boot</span>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+					</div>
+					<div class="section-subitem">
+						<div class="section-subitem-header">
+							<span class="company-name">公司名称</span>
+							<span class="range sub-text">2016-06 ~ 2018-05</span>
+						</div>
+						<div class="section-subitem-subheader sub-text">前端开发工程师</div>
+						<div class="techs-container">
+							<span class="tech">React</span>
+							<span class="tech">Vue.js</span>
+							<span class="tech">TypeScript</span>
+							<span class="tech">Node.js</span>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+						<div class="project-section">
+							<div class="project-name">项目名称</div>
+							<ul class="project-detail">
+								<li class="detail">这是一段描述</li>
+								<li class="detail">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-item personal-projects">
+				<div class="section-header">
+					<div class="section-title">个人项目</div>
+					<div class="section-headerline"></div>
+				</div>
+				<div class="section-content">
+					<div class="project-section">
+						<div class="project-name">个人项目</div>
+						<div class="project-desc">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</div>
+						<ul class="project-detail">
+							<li class="detail">这是一段描述这是一段描述</li>
+							<li class="detail">这是一段描述这是一段描述</li>
+						</ul>
+						<div class="project-techs">
+							<span class="tech">React</span>
+							<span class="tech">Python</span>
+							<span class="tech">Flask</span>
+							<span class="tech">MySQL</span>
+						</div>
+					</div>
+					<div class="project-section">
+						<div class="project-name">个人项目</div>
+						<div class="project-desc">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</div>
+						<div class="project-techs"></div>
+					</div>
+					<div class="project-section">
+						<div class="project-name">个人项目</div>
+						<div class="project-desc">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</div>
+						<ul class="project-detail">
+							<li class="detail">这是一段描述这是一段描述</li>
+							<li class="detail">这是一段描述这是一段描述</li>
+						</ul>
+						<div class="project-techs">
+							<span class="tech">Pug</span>
+							<span class="tech">Puppeteer</span>
+							<span class="tech">Gulp</span>
+							<span class="tech">MySQL</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-item education">
+				<div class="section-header">
+					<div class="section-title">教育经历</div>
+					<div class="section-headerline"></div>
+				</div>
+				<div class="section-content">
+					<div class="section-subitem">
+						<div class="section-subitem-header">
+							<span class="school-name">南京一所大学</span>
+							<span class="range sub-text">2012-09 ~ 2016-06</span>
+						</div>
+						<div class="section-subitem-subheader sub-text">本科 - 软件工程</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section-item others">
+				<div class="section-header">
+					<div class="section-title">其他链接</div>
+					<div class="section-headerline"></div>
+				</div>
+				<div class="section-content">
+					<ul class="supplements">
+						<li class="sociallink">
+							<i class="fas fa-globe-americas"></i>
+							<span class="sociallink-text">个人博客</span>
+							<a href="https://somelink" target="_blank" rel="noopener noreferrer">https://somelink</a>
+						</li>
+						<li class="sociallink">
+							<i class="fab fa-github"></i>
+							<span class="sociallink-text">Github</span>
+							<a href="https://somelink" target="_blank" rel="noopener noreferrer">https://somelink</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
