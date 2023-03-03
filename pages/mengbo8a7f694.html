@@ -49,13 +49,31 @@ ul{margin:0;padding:0}
 @font-face{font-family:"OpenSans";src:url("/assets/OpenSans-Regular.ttf")}
 @font-face{font-family:"OpenSans Light";src:url("/assets/OpenSans-Light.ttf")}
 html,body{font-family:OpenSans,-apple-system,BlinkMacSystemFont,PingFang SC,Helvetica Neue,"Microsoft YaHei",sans-serif;background:#f7f8f9;-webkit-font-smoothing:antialiased}
-@media print{html,body{background-color:#ffffff}}
 a{color:teal}
-.container{margin:10px auto;padding:10px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;background:#fff}
-@media (min-width:1024px){.container{width:800px;padding:30px 40px}}
-@media (min-width:768px) and (max-width:1024px){.container{width:750px}}
-@media (max-width:320px){.container{margin:0;padding:0 10px;box-shadow:0 0 0}}
-@media print{.container{margin:50px;box-shadow:0 0 0}.container div{break-after:always}}
+@media print{html,body{background-color:#ffffff} .container{margin:50px;box-shadow:0 0 0 0}.container div{break-after:always}}
+
+@media screen and (min-width:768px) and (max-width:1000px){body{font-size:14px} .container{width:750px}}
+@media screen and (min-width:1000px) and (max-width:1200px){body{font-size:16px} width:800px;padding:30px 40px}}
+@media screen and (min-width:1280px) and (max-width:1366px){body{font-size:18px}}
+@media screen and (min-width:1440px) and (max-width:1600px){body{font-size:20px}}
+@media screen and (min-width:1680px) and (max-width:1920px){body{font-size:22px}}
+
+@media screen and (min-width: 320px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 360px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 375px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 400px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 414px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 440px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 480px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 520px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 560px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 600px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 640px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 680px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 720px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 760px) {.container{margin:0 auto;padding:0 10px;box-shadow: none}}
+@media screen and (min-width: 800px) {}
+@media screen and (min-width: 960px) {}}
 ::-webkit-scrollbar,:hover::-webkit-scrollbar{background:transparent;width:0}
 		</style>
 	</head>
